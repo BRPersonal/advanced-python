@@ -9,12 +9,12 @@ $ conda create -n sse-env python=3.13 -y
 #activate the virtual environment
 $ conda activate sse-env 
 
-Install necessary librararies
+Install necessary libraries 
 $ pip install fastapi uvicorn
 
 Start the server
-$ uvicorn app:app --reload
-press ctrl + c to stop the server
+$ uvicorn app:app --reload 
+press ctrl + c to stop the server 
 
 Browse the url
 http://localhost:8000/stream-time
