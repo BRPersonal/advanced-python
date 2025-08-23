@@ -6,7 +6,7 @@ Setting up the dev environment
 # Create and activate a new virtual environment 
 $ conda create -n sse-env python=3.13 -y 
 
-#activate the virtual environment 
+#activate the virtual environment
 $ conda activate sse-env 
 
 Install necessary librararies
