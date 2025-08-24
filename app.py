@@ -1,7 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI,Request
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
-import time
+import util.utils as utils
+
 
 app = FastAPI()
 
@@ -13,12 +14,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-def event_stream():
-    while True:
-        yield f"The time is {time.strftime('%X')}\n\n"
-        time.sleep(1)
-
 @app.get("/stream-time")
 def stream():
     #pass an event generator to StreamingResponse
-    return StreamingResponse(event_stream(), media_type="text/event-stream")
+    return StreamingResponse(utils.event_stream(), media_type="text/event-stream")
+
+@app.get("/system-stats")
+async def stream_system_stats(request: Request):
+    return StreamingResponse(utils.system_stats_generator(request), media_type="text/event-stream")
