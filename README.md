@@ -7,6 +7,9 @@ Setting up the dev environment
 # Note we are going to use this env for all advanced python pocs  
 $ conda create -n sse-env python=3.13 -y 
 
+#list discoverable environments
+$ conda info --envs 
+
 #activate the virtual environment
 $ conda activate sse-env 
 
