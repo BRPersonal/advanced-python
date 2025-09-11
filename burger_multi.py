@@ -19,6 +19,6 @@ async def main():
 
 if __name__ == "__main__" :
     s = time.perf_counter()
-    asyncio.run(main()) #note that you can say await main()
+    asyncio.run(main())
     elapsed = time.perf_counter() - s
     print(f"Orders completed in {elapsed :0.2f} seconds")
