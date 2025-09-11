@@ -13,6 +13,8 @@ async def main():
         order_queue.append(make_burger(i+1))
 
     #execute all coroutines concurrently
+    #* unpacks the list in to 3 arguments
+    #Perfect for gather() which expects sequence of coroutines
     await asyncio.gather(*order_queue)
 
 if __name__ == "__main__" :
