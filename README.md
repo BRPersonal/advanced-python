@@ -14,9 +14,9 @@ $ conda info --envs
 $ conda activate sse-env 
 
 Install necessary libraries 
-$ pip install fastapi uvicorn
-$ pip install psutil
-$ pip install polars
+(sse-env) $ pip install fastapi uvicorn
+(sse-env) $ pip install psutil
+(sse-env) $ pip install polars
 
 Start the server
 $ uvicorn app:app --reload 
@@ -25,6 +25,9 @@ press ctrl + c to stop the server
 Browse the urls
 http://localhost:8000/stream-time
 http://localhost:8000/system-stats
+
+To decativate conda environment
+$ conda deactivate
 
 Setting up PyCharm 
 ---------- 
